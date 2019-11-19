@@ -20,3 +20,5 @@ Tasks:
 7. Setup Git (Small)
 
 Variable names: snake case
+
+Workflow: Driver/Navigator - 30 mins (5 min break)
