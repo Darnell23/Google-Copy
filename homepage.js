@@ -8,15 +8,11 @@ console.log(btn_lucky);
 btn_search.addEventListener("click", event=>{
 console.log('search button was clicked')
 
-
-
 });
 
 btn_lucky.addEventListener("click", event =>{
     console.log('lucky lucky')
 })
-
-
 
 
 
