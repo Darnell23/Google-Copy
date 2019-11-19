@@ -18,3 +18,5 @@ Tasks:
 5. Setup Node.js server (Big)
 6. Create JQuery scripts (Medium)
 7. Setup Git (Small)
+
+Variable names: snake case
