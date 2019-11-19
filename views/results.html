@@ -9,18 +9,21 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <link href="css/results.css" rel="stylesheet" type="text/css">
-  <script src="js/results.js" type="text/javascript"></script>
+  <link href="/css/results.css" rel="stylesheet" type="text/css">
+  <script src="/js/results.js" type="text/javascript"></script>
     <title>Results</title>
 </head>
 <body>
     <section id="search_section">
         
         <div class="img_container spaced">
-            <img src="assets/dnjSmall.png" alt="DnJ search logo">
+            <img src="/assets/dnjSmall.png" alt="DnJ search logo">
         </div>
         <div class="search_container spaced">
-            <input type="text" id="search_bar" placeholder="Search here">
+            <form action="/results/" method="POST">
+            <input type="text" id="search_bar" name="search_text" placeholder="Search here">
+            <input type="submit">
+            </form>
         </div>
         <button type="button" id="btn_search" class="spaced">Search</button>
 
@@ -28,7 +31,7 @@
 
     <section id="results_section">
         <ul class="spaced">
-            <li>1</li>
+            <li><%= data.search_text %></li>
             <li>2</li>
             <li>3</li>
             <li>4</li>

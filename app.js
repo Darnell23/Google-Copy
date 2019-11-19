@@ -4,6 +4,7 @@ const port = 3000;
 
 app.use(express.static('views'));
 app.use(express.static('public'));
+app.use(express.urlencoded());
 app.engine('html',require('ejs').renderFile);
 app.get('/',(req,res)=>{
 
@@ -11,8 +12,8 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/results/',(req,res)=>{
-
-    res.render('results.html');
+    console.log(req.body);
+    res.render('results.html', {data: req.body});
 })
 
 app.listen(port,()=> console.log(`listening on ${port}`))
