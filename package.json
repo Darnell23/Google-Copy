@@ -1,0 +1,24 @@
+{
+  "name": "dnj_search",
+  "version": "1.0.0",
+  "description": "User Stories: 1. As a user i want to be able to display ten search results. So i can find a website. 2. As a user I want to display a site based on on my search results. So i dont have to choose one. 3. As a user i want to be able to enter search terms to be able to influence my search. 4. As a user i want to be able to return to the homepage. So i can make a new search. 5. As a user i want to load a website when i click on its search result. So i can visit that site.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darnell23/Google-Copy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darnell23/Google-Copy/issues"
+  },
+  "homepage": "https://github.com/Darnell23/Google-Copy#readme",
+  "dependencies": {
+    "ejs": "^2.7.3",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  }
+}

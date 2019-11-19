@@ -1,0 +1,42 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    height: 100%;
+}
+
+#search_bar{
+    width: 500px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#search_section{
+    display:flex;
+    height: 70%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+
+}
+
+#buttons_section{
+    display: flex;
+    height: 30%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button{
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    font-family: 'Noto Serif JP', serif;
+    background-color: #c9c9c9;
+}
