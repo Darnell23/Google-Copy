@@ -21,17 +21,17 @@
         </div>
         <div class="search_container spaced">
             <form action="/results/" method="POST">
-            <input type="text" id="search_bar" name="search_text" placeholder="Search here">
-            <input type="submit">
+            <input type="text" id="search_bar" name="search" placeholder="Search here">
+            <input type="submit" class="button spaced" value="Search">
             </form>
         </div>
-        <button type="button" id="btn_search" class="spaced">Search</button>
+        
 
     </section>
 
     <section id="results_section">
         <ul class="spaced">
-            <li><%= data.search_text %></li>
+            <li><%= data.search %></li>
             <li>2</li>
             <li>3</li>
             <li>4</li>

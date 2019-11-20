@@ -20,20 +20,17 @@
         </div>
         <div class="search_container">
             <form action="/results/" method="POST">
-                <input type="text" name="search_text" placeholder="Search here">
-                <input type="submit">
-                <input type="submit">
+                <input type="text" name="search" id="search_bar" placeholder="Search here">
+                <section id="buttons_section">
+                    <input type="submit" name="btn_search"class="button" value="Search">
+                <input type="submit" name="btn_lucky" class="button" value="Feeling lucky">
+                </section>
                 
             </form>
-
         </div>
 
     </section>
 
-    <section id="buttons_section">
-        <button type="button" id="btn_search">Search</button>
-        <button type="button" id="btn_lucky">Feeling lucky</button>
-
-    </section>
+    
 </body>
 </html>
