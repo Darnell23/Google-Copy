@@ -23,8 +23,18 @@ async function get_api_data(request, res){
     // console.log(response.items[0].title)
     // console.log(response.items[0].link)
     // console.log({data:response.items})
-
-    res.render('results.ejs', {data: response.items});
+    if (request.hasOwnProperty('btn_search'))
+    {
+        res.render('results.ejs', {data: response.items});
+    }
+    else if (request.hasOwnProperty('btn_lucky'))
+    {   console.log('lucky');
+    //that's kinda cool i like that
+    const random = Math.floor(Math.random() * response.items.length -1)
+    console.log(random);
+    res.redirect(response.items[random].link);        
+    }
+    
 
 }
 
@@ -36,7 +46,17 @@ app.get('/',(req,res)=>{
 
 app.post('/results/',(req,res)=>{
     // console.log(req.body);
-    get_api_data(req.body, res);
+
+    //if there isnt a search term
+    if(req.body.search === "")
+    {
+        //log error
+    }
+    else if (req.body.search){
+        console.log('starting search')
+        get_api_data(req.body, res);
+    }
+    
     // if(req.body.hasOwnProperty('btn_search'))
     // {
     //     res.render('results.ejs', {data: req.body});
