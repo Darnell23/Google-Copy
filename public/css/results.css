@@ -36,10 +36,18 @@ body{
 #results_section{
     height: 80%;
 } 
+a{
+    font-family: 'Noto Serif JP', serif;
+    font-size: large;
+}
+a:hover{
+    background-color: rgba(115, 171, 217,0.5);
+}
 
 ul{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    list-style-type: none;
     height: 80%;
 }
