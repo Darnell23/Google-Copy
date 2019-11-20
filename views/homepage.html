@@ -9,26 +9,28 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <link href="homepage.css" rel="stylesheet" type="text/css">
-  <script src="homepage.js" type="text/javascript"></script>
+  <link href="/css/homepage.css" rel="stylesheet" type="text/css">
+  <script src="/js/homepage.js" type="text/javascript"></script>
     <title>Homepage</title>
 </head>
 <body>
     <section id="search_section">
         <div class="img_container">
-            <img src="images/dnjLarge.png" alt="DnJ search logo">
+            <img src="/assets/dnjLarge.png" alt="DnJ search logo">
         </div>
         <div class="search_container">
-            Search
-
+            <form action="/results/" method="POST">
+                <input type="text" name="search" id="search_bar" placeholder="Search here">
+                <section id="buttons_section">
+                    <input type="submit" name="btn_search"class="button" value="Search">
+                <input type="submit" name="btn_lucky" class="button" value="Feeling lucky">
+                </section>
+                
+            </form>
         </div>
 
     </section>
 
-    <section id="buttons_section">
-        <button type="button" id="btn_search">Search</button>
-        <button type="button" id="btn_lucky">Feeling lucky</button>
-
-    </section>
+    
 </body>
 </html>

@@ -1,4 +1,4 @@
-button{
+.button{
     border-radius: 5px;
     width: 200px;
     height: 30px;
@@ -12,14 +12,12 @@ html{
 
 body{
     height: 100%;
-    border: 2px solid grey;
     display: flex;
     flex-direction: column;
 
 }
 
 #search_section{
-    border: 2px solid red;
     display: flex;
     align-items: center;
     height: 20%;
@@ -36,9 +34,7 @@ body{
 }
 
 #results_section{
-    border: 2px solid green;
     height: 80%;
-
 } 
 
 ul{

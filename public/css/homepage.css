@@ -9,6 +9,12 @@ body{
     height: 100%;
 }
 
+#search_bar{
+    width: 500px;
+    height: 20px;
+    border-radius: 5px;
+}
+
 #search_section{
     display:flex;
     height: 70%;
@@ -20,17 +26,29 @@ body{
 }
 
 #buttons_section{
+    margin-top: 20px;
     display: flex;
-    height: 30%;
     width: 100%;
     align-items: center;
     justify-content: space-around;
 }
 
-button{
+#search_bar{
+    width: 500px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.button{
     border-radius: 5px;
     width: 200px;
     height: 30px;
     font-family: 'Noto Serif JP', serif;
     background-color: #c9c9c9;
+}
+
+form {
+    widows: 100%;
+    display: flex;
+    flex-direction: column;
 }
