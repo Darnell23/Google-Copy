@@ -21,7 +21,7 @@
         </div>
         <div class="search_container spaced">
             <form action="/results/" method="POST">
-            <input type="text" id="search_bar" name="search" placeholder="Search here">
+            <input type="text" id="search_bar" name="search" placeholder="Search here" value="<%= data.search %>">
             <input type="submit" class="button spaced" value="Search">
             </form>
         </div>
@@ -31,18 +31,17 @@
 
     <section id="results_section">
         <ul class="spaced">
-            <li><a href="<%= data[0].link %>"><%= data[0].title %></a>
-            </li>
-            <li><a href="<%= data[1].link %>"><%= data[1].title %></a></li>
-            <li><a href="<%= data[2].link %>"><%= data[2].title %></a></li>
-            <li><a href="<%= data[3].link %>"><%= data[3].title %></a></li>
-            <li><a href="<%= data[4].link %>"><%= data[4].title %></a></li>
-            <li><a href="<%= data[5].link %>"><%= data[5].title %></a></li>
-            <li><a href="<%= data[6].link %>"><%= data[6].title %></a></li>
-            <li><a href="<%= data[7].link %>"><%= data[7].title %></a></li>
-            <li><a href="<%= data[8].link %>"><%= data[8].title %></a></li>
-            <li><a href="<%= data[9].link %>"><%= data[9].title %></a></li>
-            
+
+            <!--  -->
+            <% if (data.valid) { %> 
+            <% for(let i=0; i < data.results.length; i++ ) { %>
+            <li><a href="<%= data.results[i].link %>"><%= data.results[i].title %></a></li>
+                <% } %>
+            <!--  -->
+            <% } else { %>
+              <p>No search results found</p> 
+            <% } %> 
+                
         </ul>
 
     </section>

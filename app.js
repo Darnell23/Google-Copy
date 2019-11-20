@@ -19,13 +19,17 @@ async function get_api_data(request, res){
 
     const raw_response = await fetch(url);
     const response = await raw_response.json();
-    // console.log(response.items[0]);
-    // console.log(response.items[0].title)
-    // console.log(response.items[0].link)
-    // console.log({data:response.items})
+
+    if(response.items === undefined)
+    {
+        //log error
+        res.render('results.ejs', {data: {valid: false, search : search_term}});
+    }
+    else if(response.items)
+    {
     if (request.hasOwnProperty('btn_search'))
     {
-        res.render('results.ejs', {data: response.items});
+        res.render('results.ejs', {data: {results: response.items, valid : true, search: search_term}});
     }
     else if (request.hasOwnProperty('btn_lucky'))
     {   console.log('lucky');
@@ -34,7 +38,7 @@ async function get_api_data(request, res){
     console.log(random);
     res.redirect(response.items[random].link);        
     }
-    
+    }   
 
 }
 
