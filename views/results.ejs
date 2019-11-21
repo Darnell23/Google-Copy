@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <link href="/css/results.css" rel="stylesheet" type="text/css">
+  <script src="/js/results.js" type="text/javascript"></script>
+    <title>Results</title>
+</head>
+<body>
+    <section id="search_section">
+        
+        <div class="img_container spaced">
+            <img src="/assets/dnjSmall.png" id="logo" alt="DnJ search logo">
+        </div>
+        <div class="search_container spaced">
+            <form action="/results/" method="POST">
+            <input type="text" id="search_bar" name="search" placeholder="Search here" value="<%= data.search %>">
+            <input type="submit" class="button spaced" value="Search">
+            </form>
+        </div>
+        
+
+    </section>
+
+    <section id="results_section">
+        <ul class="spaced">
+
+            <!--  -->
+            <% if (data.valid) { %> 
+            <% for(let i=0; i < data.results.length; i++ ) { %>
+            <li><a href="<%= data.results[i].link %>"><%= data.results[i].title %></a></li>
+                <% } %>
+            <!--  -->
+            <% } else { %>
+              <p>No search results found</p> 
+            <% } %> 
+                
+        </ul>
+
+    </section>
+</body>
+</html>
